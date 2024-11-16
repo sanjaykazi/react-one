@@ -1,0 +1,29 @@
+
+ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-evenly;
+    padding: 20px;
+    background-color: orange;
+    text-decoration: none;
+    margin-top: 0;
+    
+}
+/* Remove underline from React Router Links */
+ul li a, ul li Link {
+    text-decoration: none; /* Removes the underline */
+    color: inherit; /* Ensures the text inherits the color */
+    font: bold;
+  }
+
+/* Optional hover effect for Links */
+ul li Link:hover, ul li a:hover {
+    color: blue; /* Changes color on hover */
+  }
+
+.active-link{
+    border: 1px solid black;
+    padding: 2px;
+    border-radius: 4px;
+    box-shadow: 2px 2px 10px black;
+}
