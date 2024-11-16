@@ -1,0 +1,6 @@
+.input-error{
+  border: 1px solid rgb(225, 66, 66);
+}
+.error-msg{
+  color: rgb(134, 183, 82);
+}
