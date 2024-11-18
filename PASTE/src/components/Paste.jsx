@@ -65,7 +65,7 @@ const Paste = () => {
                                             Share
                                         </button>
                                     </div>
-                                    <div>
+                                    <div className='font-mono'>
                                         {paste.createdAt}
                                     </div>
                                 </div>
