@@ -16,7 +16,7 @@ const Paste = () => {
     return (
         <div>
             <input
-                className='border rounded-xl p-2 min-w-[600px] mt-5'
+                className='border rounded-xl p-2 min-w-[600px] mt-5 text-center'
                 type='search'
                 placeholder='Search Here'
                 value={searchTerm}
@@ -28,36 +28,40 @@ const Paste = () => {
                     filteredData.map(
                         (paste) => {
                             return (
-                                <div className='border' key={paste?._id}>
+                                <div className='border rounded-xl' key={paste?._id}>
 
-                                    <div>
-                                        {paste.title}
+                                    <div className='font-bold font-mono'>
+                                        {paste.title.toUpperCase()}
+                                        <hr />
                                     </div>
-                                    <div>
+                                    <div className='font-mono'>
                                         {paste.content}
+                                        <hr/>
                                     </div>
-                                    <div className='flex flex-row gap-4 place-content-evenly'>
-                                        <button>
+                                    <div className='flex flex-row gap-4 place-content-evenly mt-3'>
+                                        <button className='border p-1 rounded-lg bg-slate-100 px-2'>
                                             <a href={`/?pasteId=${paste?._id}`}>
                                                 Edit
                                             </a>
                                             
                                         </button>
-                                        <button >
+                                        <button  className='border p-1 rounded-lg bg-slate-100 px-2'>
                                             <a href={`/pastes/${paste?._id}`}>
                                                 View
                                             </a>
                                         </button>
-                                        <button onClick={() => handleDelete(paste?._id)}>
+                                        <button onClick={() => handleDelete(paste?._id)}
+                                         className='border p-1 rounded-lg bg-slate-100 px-2'>
                                             Delete
                                         </button>
                                         <button onClick={() => {
                                             navigator.clipboard.writeText(paste?.content)
                                             toast.success("Copid to Clipboard")
-                                        }}>
+                                        }}
+                                        className='border p-1 rounded-lg bg-slate-100 px-2'>
                                             Copy
                                         </button>
-                                        <button>
+                                        <button  className='border p-1 rounded-lg bg-slate-100 px-2'>
                                             Share
                                         </button>
                                     </div>

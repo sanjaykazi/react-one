@@ -45,7 +45,7 @@ const Home = () => {
     }
     return (
         <div >
-            <div className='flex flex-row gap-7 place-content-between'>
+            <div className='flex flex-row gap-7 place-content-between '>
                 <input
                     className='p-2 place-content-evenly rounded-xl mt-2 border text-center w-[40%]'
                     type='text'

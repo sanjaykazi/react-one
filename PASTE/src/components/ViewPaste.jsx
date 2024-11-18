@@ -11,10 +11,10 @@ const ViewPaste = () => {
     ((state) => state.paste.pastes);
     const paste = allPastes.filter((p) => p._id === id)[0];
   return (
-    <div>
-      <div className='flex flex-row gap-7 place-content-between'>
+    <div className='flex flex-col '>
+      <div className='flex jutify-content-centre'>
                 <input
-                    className='p-2 place-content-evenly rounded-xl mt-2 border text-center w-[40%]'
+                    className='p-2 rounded-xl mt-2 border text-center w-[50%] ml-[300px] font-mono'
                     type='text'
                     placeholder='Enter Title here'
                     value={paste.title}
@@ -31,7 +31,7 @@ const ViewPaste = () => {
             </div>
             <div className='mt-8'>
                 <textarea 
-                    className='border rounded-2xl mt-4 text-center min-w-[500px] p-4'
+                    className='border rounded-2xl mt-4 text-center min-w-[500px] p-4 font-mono'
                     value={paste.content}
                     placeholder='Enter content here'
                     onChange={(e) => setValue(e.target.value)}
