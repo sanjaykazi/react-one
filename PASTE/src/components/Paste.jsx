@@ -1,8 +1,8 @@
 import React from 'react'
 import { useState } from 'react';
-import { useSelector, useDispatch } from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux'
 import { removeFromPastes } from '../redux/pasteSlice';
-import toast from 'react-hot-toast';
+import toast from 'react-hot-toast'
 const Paste = () => {
     const pastes = useSelector((state) => state.paste.pastes);
     const [searchTerm, serSearchTerm] = useState('');
