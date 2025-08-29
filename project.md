@@ -5,41 +5,41 @@
 ```mermaid
 graph TB
     subgraph "Frontend Layer"
-        UI[Web Interface<br/>HTML/CSS/JavaScript]
-        SSE[Server-Sent Events<br/>Real-time Streaming]
+        UI[Web Interface\nHTML/CSS/JavaScript]
+        SSE[Server-Sent Events\nReal-time Streaming]
     end
 
     subgraph "API Layer"
-        Flask[Flask Web Server<br/>Port 5252]
-        ChatAPI[/api/chat<br/>Standard Chat]
-        StreamAPI[/api/chat/stream<br/>Streaming Chat]
-        StatusAPI[/api/status<br/>System Health]
+        Flask[Flask Web Server\nPort 5252]
+        ChatAPI[/api/chat\nStandard Chat/]
+        StreamAPI[/api/chat/stream\nStreaming Chat/]
+        StatusAPI[/api/status\nSystem Health/]
     end
 
     subgraph "RAG Pipeline"
-        ChatEngine[Chat Engine<br/>RAG Orchestrator]
-        Retrieval[Document Retrieval<br/>Vector Search]
-        Augmentation[Context Augmentation<br/>Query + Documents]
-        Generation[LLM Generation<br/>DeepSeek/OpenAI]
+        ChatEngine[Chat Engine\nRAG Orchestrator]
+        Retrieval[Document Retrieval\nVector Search]
+        Augmentation[Context Augmentation\nQuery + Documents]
+        Generation[LLM Generation\nDeepSeek/OpenAI]
     end
 
     subgraph "Vector Database"
-        ChromaDB[ChromaDB<br/>Vector Store]
-        Embeddings[384D Embeddings<br/>all-MiniLM-L6-v2]
-        Collections[Document Collections<br/>Cosine Similarity]
+        ChromaDB[ChromaDB\nVector Store]
+        Embeddings[384D Embeddings\nall-MiniLM-L6-v2]
+        Collections[Document Collections\nCosine Similarity]
     end
 
     subgraph "Document Processing"
-        DocProcessor[Document Processor<br/>Chunking Engine]
-        Chunking[Smart Chunking<br/>500 chars + 100 overlap]
-        Metadata[Metadata Extraction<br/>Title, Category, File]
+        DocProcessor[Document Processor\nChunking Engine]
+        Chunking[Smart Chunking\n500 chars + 100 overlap]
+        Metadata[Metadata Extraction\nTitle, Category, File]
     end
 
     subgraph "Knowledge Base"
-        EmployeeDocs[Employee Handbook<br/>Policies & Benefits]
-        ProductDocs[Product Specs<br/>CloudSync Pro, DataVault]
-        MeetingDocs[Meeting Notes<br/>Q3 Planning, Launch Review]
-        CustomerDocs[Customer FAQs<br/>General Support]
+        EmployeeDocs[Employee Handbook\nPolicies & Benefits]
+        ProductDocs[Product Specs\nCloudSync Pro, DataVault]
+        MeetingDocs[Meeting Notes\nQ3 Planning, Launch Review]
+        CustomerDocs[Customer FAQs\nGeneral Support]
     end
 
     UI --> Flask
